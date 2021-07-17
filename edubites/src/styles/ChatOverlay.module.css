@@ -1,0 +1,11 @@
+.chatBox {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #87b6b8;
+}
+
+.alert {
+  margin-left: 0.25rem;
+  color: brown;
+}

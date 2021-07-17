@@ -1,0 +1,91 @@
+.arrow {
+  margin: 0 10px;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.cardSection {
+  flex: 1;
+  display: flex;
+  overflow: auto;
+  margin: 10px 0;
+}
+
+.cardLink {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.cardBox {
+  display: flex;
+  min-height: min-content;
+}
+
+.cardBox > * {
+  margin: 15px 15px;
+}
+
+.card {
+  width: 280px;
+  min-height: 370px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 8px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s ease all;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  transition: 0.3s ease all;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.descriptionSection {
+  padding: 10px;
+}
+
+.cardSection::-webkit-scrollbar {
+  width: 10px;
+}
+
+.cardSection::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+
+.cardSection::-webkit-scrollbar-thumb {
+  background-color: #cdcdcd;
+  border-radius: 100px;
+}
+
+.hero {
+  position: relative;
+}
+
+.heroImage {
+  width: 100%;
+  height: 70vh;
+  opacity: 0.6;
+  object-fit: cover;
+}
+
+.heroContent {
+  position: absolute;
+  padding-top: 6rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.stats {
+  padding-top: 1em;
+}

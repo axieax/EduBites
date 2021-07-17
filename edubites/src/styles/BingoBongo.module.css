@@ -1,0 +1,11 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.questionHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

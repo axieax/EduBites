@@ -1,0 +1,11 @@
+.footer {
+  height: 65px;
+  width: 100%;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 30px;
+}

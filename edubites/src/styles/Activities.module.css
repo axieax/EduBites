@@ -1,0 +1,39 @@
+.mentalMathsSection {
+  position: relative;
+  margin: 50px 0;
+}
+
+.questions {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.options {
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+.option {
+  min-height: 70px;
+  font-size: 1.3rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: lightgray;
+  opacity: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resetContent {
+  text-align: center;
+}

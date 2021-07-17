@@ -1,8 +1,9 @@
-LET'S WIN THIS 
-HAC
-KAT
+from flask import Flask
+APP = Flask(__name__)
 
-JJ
+@APP.route('/')
+def index():
+    return 'Hello World'
 
-
-HON
+if __name__ == '__main__':
+    APP.run(debug=True)

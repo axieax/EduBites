@@ -1,0 +1,9 @@
+.imageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageWrapper img {
+  height: 100px;
+}
