@@ -11,6 +11,7 @@ import { Container } from "@material-ui/core";
 
 import Menu from "@material-ui/core/Menu";
 import { MenuItem } from "@material-ui/core";
+import question from "../assets/mathQuestion.png";
 import board from "../assets/bingoBongoBoard.png";
 import profile from "../assets/profile.png";
 import info from "../assets/info.png";
@@ -28,14 +29,11 @@ export default function BingoBongo() {
           </div>
         </div>
 
-        <div className={styles.questionText}>
-          <Typography variant="h3">
-            A baseball bat and a ball cost $1.10 together, and the bat costs
-            $1.00 more than the ball, how much does the ball cost?
-          </Typography>
+        <div className={styles.question}>
+          <img src={question} className={styles.questionImg} />
         </div>
 
-        <form className={styles.answerBox}>
+        <form>
           <label>
             Answer:
             <input type="text" name="name" />
@@ -94,7 +92,6 @@ function InsertInfoButton() {
         onClose={handleClose}
       >
         <MenuItem onClick={handleClose}> Rules </MenuItem>
-        {/* include */}
         <MenuItem onClick={handleClose}> High Scores </MenuItem>
         <MenuItem onClick={handleClose}> Your Statistics </MenuItem>
       </Menu>

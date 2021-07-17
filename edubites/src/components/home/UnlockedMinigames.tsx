@@ -12,11 +12,13 @@ import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
 const tasksData = [
   {
-    name: "Skribble.io",
-    topic: "Art",
-    description: "Be the quickest to guess each other's drawings.",
-    thumbnail: "https://skribbl.io/res/thumbnail.png",
-    href: "https://www.skribbl.io/",
+    name: "Bingo Bongo",
+    topic: "Maths",
+    description:
+      "A fun mathematical game where you can race your friends clearing the board.",
+    thumbnail:
+      "https://store-images.s-microsoft.com/image/apps.34080.13510798887528624.ea88a7e6-557c-4ad5-99d7-c574f430c827.3c187ff1-754c-409a-9085-8e3aac2d97c5?mode=scale&q=90&h=1080&w=1920",
+    href: "/games/bingobongo",
   },
   {
     name: "Tetris",
@@ -52,15 +54,11 @@ const UnlockedMinigames = () => {
             <div key={key} className={styles.card}>
               <img src={game.thumbnail} />
               <div className={styles.descriptionSection}>
-                <Typography variant="h3" component="h3">
-                  {game.name}
+                <Typography variant="h4" style={{ fontWeight: "bold" }}>
+                  {game.topic}
                 </Typography>
-                <br />
-                <h3>{game.topic}</h3>
-                <br />
-                <Typography variant="body2" component="p">
-                  {game.description}
-                </Typography>
+                <Typography variant="h3">{game.name}</Typography>
+                <Typography variant="body1">{game.description}</Typography>
               </div>
             </div>
           </a>

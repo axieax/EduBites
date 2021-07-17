@@ -65,15 +65,11 @@ const AssignedActivities = () => {
             <div key={key} className={styles.card}>
               <img src={game.thumbnail} />
               <div className={styles.descriptionSection}>
-                <Typography variant="h5" component="h5">
-                  {game.name}
+                <Typography variant="h4" style={{ fontWeight: "bold" }}>
+                  {game.topic}
                 </Typography>
-                <br />
-                <h3>{game.topic}</h3>
-                <br />
-                <Typography variant="body2" component="p">
-                  {game.description}
-                </Typography>
+                <Typography variant="h3">{game.name}</Typography>
+                <Typography variant="body1">{game.description}</Typography>
               </div>
             </div>
           </a>

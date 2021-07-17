@@ -1,3 +1,5 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow:
+# nice try
+# have you tried being a better hacker
+
+# im omkar
+# i measure my temperature 5 times every hour

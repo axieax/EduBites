@@ -34,3 +34,7 @@
 .points {
   margin-right: 0.5rem;
 }
+
+.podium {
+  cursor: pointer;
+}

@@ -19,7 +19,6 @@ const tasksData = [
   {
     name: "History Research",
     due: "19/07/2021",
-    // topics: [HISTORY],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed neque a quam tempus pellentesque. Aliquam sodales tristique lacus eu.",
     thumbnail:
@@ -29,7 +28,6 @@ const tasksData = [
   {
     name: "English Definitions",
     due: "20/07/2021",
-    // topics: [ENGLISH],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed neque a quam tempus pellentesque. Aliquam sodales tristique lacus eu.",
     thumbnail:
@@ -39,7 +37,6 @@ const tasksData = [
   {
     name: "Mental Mathematics",
     due: "16/07/2021",
-    // topics: [MATHS],
     description:
       "Master your mathematical proficiency by practising speed addition, subtraction, multiplication and modular arithmetic in this activity!",
     thumbnail:
@@ -49,7 +46,6 @@ const tasksData = [
   {
     name: "Experiment Draft",
     due: "26/07/2021",
-    // topics: [SCIENCE],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed neque a quam tempus pellentesque. Aliquam sodales tristique lacus eu.",
     thumbnail:
@@ -59,7 +55,6 @@ const tasksData = [
   {
     name: "Maths Homework",
     due: "21/07/2021",
-    // topics: [MATHS],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed neque a quam tempus pellentesque. Aliquam sodales tristique lacus eu.",
     thumbnail: "https://cdn.cdnparenting.com/articles/2018/06/471582446_H.jpg",
@@ -68,7 +63,6 @@ const tasksData = [
   {
     name: "Scientific Report",
     due: "10/08/2021",
-    // topics: [SCIENCE],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed neque a quam tempus pellentesque. Aliquam sodales tristique lacus eu.",
     thumbnail:
@@ -123,16 +117,11 @@ const AssignedActivities = () => {
               <div key={key} className={styles.card}>
                 <img src={game.thumbnail} />
                 <div className={styles.descriptionSection}>
-                  <Typography variant="h5" component="h5">
-                    {game.name}
-                  </Typography>
-                  <Typography variant="body1" component="div">
+                  <Typography variant="h3">{game.name}</Typography>
+                  <Typography variant="h4" style={{ fontWeight: "bold" }}>
                     Due: {game.due}
                   </Typography>
-                  <br />
-                  <Typography variant="body2" component="p">
-                    {game.description}
-                  </Typography>
+                  <Typography variant="body1">{game.description}</Typography>
                 </div>
               </div>
             </a>

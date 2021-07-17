@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import styles from "../../styles/Dashboard.module.css";
-import {
-  Container,
-  Box,
-  Typography,
-  Select,
-  MenuItem,
-} from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 
 const tasksData = [
   {
@@ -22,7 +16,7 @@ const tasksData = [
     name: "Crossword",
     topic: "Puzzle",
     description:
-      "Improve your vobulary and trivia knowledge by solving these crossword puzzles.",
+      "Improve your vocabulary and trivia knowledge by solving these crossword puzzles.",
     thumbnail:
       "https://www.researchgate.net/profile/Angel-Abuelo/publication/301621212/figure/fig1/AS:357989061021697@1462362652095/Example-of-a-crossword-puzzle-The-crossword-puzzle-was-presented-in-an-html-environment_Q640.jpg",
     href: "https://thenewdaily.com.au/puzzles/quiz-crossword/",
@@ -57,14 +51,8 @@ const tasksData = [
 
 const Educational = () => {
   const [tasks, setTasks] = useState(tasksData);
-  const [option, setOption] = useState("");
-  const [open, setOpen] = React.useState(false);
   return (
     <div>
-      <br />
-      <Typography variant="h2" align="center">
-        Games Hub
-      </Typography>
       <br />
       <Typography variant="h3" component="h3">
         Earn Bites while learning here! Try out our educational games
@@ -72,16 +60,22 @@ const Educational = () => {
       <div className={styles.cardSection}>
         <div className={styles.cardBox}>
           {tasks.map((game, key) => (
-            <div key={key} className={styles.card}>
-              <img src={game.thumbnail} />
-              <div className={styles.descriptionSection}>
-                <h3>{game.name}</h3>
-                <br />
-                <h4>{game.topic}</h4>
-                <br />
-                <p>{game.description}</p>
+            <a
+              href={game.href}
+              className={styles.cardLink}
+              style={{ margin: 10 }}
+            >
+              <div key={key} className={styles.card}>
+                <img src={game.thumbnail} />
+                <div className={styles.descriptionSection}>
+                  <Typography variant="h4" style={{ fontWeight: "bold" }}>
+                    {game.topic}
+                  </Typography>
+                  <Typography variant="h3">{game.name}</Typography>
+                  <Typography variant="body1">{game.description}</Typography>
+                </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

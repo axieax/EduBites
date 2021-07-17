@@ -4,18 +4,31 @@ import { Link } from "react-router-dom";
 
 import styles from "../styles/NavBar.module.css";
 
-import { makeStyles } from "@material-ui/core/styles";
-
-import { Container } from "@material-ui/core";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
+import {
+  Container,
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  IconButton,
+  Menu,
+  MenuItem,
+  makeStyles,
+} from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
+import full_logo from "../assets/full_logo.png";
+import podium from "../assets/podium.png";
+import store from "../assets/store.png";
+import profile from "../assets/profile.png";
+
+import {
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,6 +43,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function ButtonAppBar() {
+  const [open, setOpen] = useState(false);
+  const handleClickOpen = () => setOpen(true);
+  const handleClickClose = () => setOpen(false);
+
   const classes = useStyles();
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -50,17 +67,18 @@ export default function ButtonAppBar() {
             <div className={styles.navbar} color="red">
               <div className={styles.left}>
                 <Link to="/">
-                  <img src="full_logo.png" className={styles.logo} />
+                  <img src={full_logo} className={styles.logo} />
                 </Link>
               </div>
 
               <div className={styles.right}>
                 <Typography className={styles.points}>1234 Bites</Typography>
-                <Link to="/leaderboard">
-                  <img src="podium.png" className={styles.icon} />
-                </Link>
-                <Link to="/game">
-                  <img src="store.png" className={styles.icon} />
+
+                <div onClick={handleClickOpen} className={styles.podium}>
+                  <img src={podium} className={styles.icon} />
+                </div>
+                <Link to="/bitestore">
+                  <img src={store} className={styles.icon} />
                 </Link>
 
                 <InsertProfileButton
@@ -75,6 +93,32 @@ export default function ButtonAppBar() {
           </Toolbar>
         </Container>
       </AppBar>
+      <Dialog
+        open={open}
+        onClose={handleClickClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          {"Use EduBites' Leaderboard Feature?"}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            You need to upgrade to Premium in order to unlock this feature,
+            along with many other functionalities useful for a school
+            environment. Please proceed to our purchases page if you would like
+            to confirm a monthly subscription.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClickClose} color="primary" autoFocus>
+            Disagree
+          </Button>
+          <Button color="primary" onClick={handleClickClose}>
+            Agree
+          </Button>
+        </DialogActions>
+      </Dialog>
     </div>
   );
 }
@@ -95,7 +139,7 @@ function InsertProfileButton({
         aria-label="menu"
         onClick={handleClick}
       >
-        <img src="profile.png" className={styles.icon} />
+        <img src={profile} className={styles.icon} />
       </IconButton>
       <Menu
         id="simple-menu"

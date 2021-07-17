@@ -1,16 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Hero from "../components/home/Hero";
 import AssignedActivities from "../components/home/AssignedActivities";
 import BonusBites from "../components/home/BonusBites";
 import ReviewActivities from "../components/home/ReviewActivities";
 import UnlockedMinigames from "../components/home/UnlockedMinigames";
-import {
-  Container,
-  Box,
-  Typography,
-  Select,
-  MenuItem,
-} from "@material-ui/core";
+import { Container } from "@material-ui/core";
 
 export default function DashBoard() {
   return (

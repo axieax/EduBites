@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "../../styles/Dashboard.module.css";
 import { Container, Typography } from "@material-ui/core";
+import hero from "../../assets/hero.jpg";
 
 export default function Hero() {
   return (
     <section className={styles.hero}>
-      <img src="hero.jpg" alt="hero" className={styles.heroImage} />
+      <img src={hero} alt="hero" className={styles.heroImage} />
       <div className={styles.heroContent}>
         <Container>
           <Typography variant="h1">Welcome Back, Bob!</Typography>

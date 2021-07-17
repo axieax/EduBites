@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import GamesHub from "./pages/GamesHub";
+import BiteStore from "./pages/BiteStore";
 import Dashboard from "./pages/Dashboard";
 import NavBar from "./components/NavBar";
 import "./styles/Global.css";
@@ -22,9 +22,11 @@ const theme = createTheme({
     },
     h3: {
       fontSize: "1.5rem",
+      marginBottom: "0.6rem",
     },
     h4: {
       fontSize: "1rem",
+      marginBottom: "0.3rem",
     },
   },
 });
@@ -38,8 +40,8 @@ function App() {
           <Route exact path="/">
             <Dashboard />
           </Route>
-          <Route exact path="/game">
-            <GamesHub />
+          <Route exact path="/bitestore">
+            <BiteStore />
           </Route>
           <Route exact path="/leaderboards">
             Leaderboards
@@ -47,7 +49,7 @@ function App() {
           <Route exact path="/activities/mentalmaths">
             <MentalMaths />
           </Route>
-          <Route exact path="/activities/bingobongo">
+          <Route exact path="/games/bingobongo">
             <BingoBongo />
           </Route>
         </Switch>

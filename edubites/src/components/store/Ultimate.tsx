@@ -12,7 +12,8 @@ const tasksData = [
   {
     name: "Skribblio",
     topic: "Art",
-    description: "Be the quickest to guess each other's drawings.",
+    description:
+      "Guess each other's drawings in the shortest amount of time - be nice!",
     thumbnail: "https://skribbl.io/res/thumbnail.png",
     href: "https://www.skribbl.io/",
   },
@@ -29,7 +30,7 @@ const tasksData = [
     name: "Avalon",
     topic: "Critical Thinking",
     description:
-      "Find out who's lying and who's a truly loyal servant of Arthur.",
+      "Discuss and find out who's lying and who's truly a loyal servant of Arthur.",
     thumbnail:
       "https://images.saymedia-content.com/.image/t_share/MTc0NDE3NDkxNzc3Mjk5ODE2/how-to-play-avalon.jpg",
     href: "https://avalon.fun/",
@@ -44,19 +45,28 @@ const Ultimate = () => {
     <div>
       <br />
       <Typography variant="h3" component="h3">
-        Ultimate Games - Unlock when you have obtained 1000 Bites
+        Ultimate Games! Unlock with Bites
       </Typography>
       <div className={styles.cardSection}>
         <div className={styles.cardBox}>
           {tasks.map((game, key) => (
-            <div key={key} className={styles.card}>
-              <img src={game.thumbnail} />
+            <div
+              key={key}
+              className={styles.card}
+              style={{ opacity: 0.9, background: "#777" }}
+            >
+              <div className={styles.thumbnail}>
+                <img src={game.thumbnail} />
+                <div className={styles.lock}>
+                  <img src="https://static.thenounproject.com/png/10982-200.png" />
+                </div>
+              </div>
               <div className={styles.descriptionSection}>
-                <h3>{game.name}</h3>
-                <br />
-                <h4>{game.topic}</h4>
-                <br />
-                <p>{game.description}</p>
+                <Typography variant="h4" style={{ fontWeight: "bold" }}>
+                  {game.topic}
+                </Typography>
+                <Typography variant="h3">{game.name}</Typography>
+                <Typography variant="body1">{game.description}</Typography>
               </div>
             </div>
           ))}

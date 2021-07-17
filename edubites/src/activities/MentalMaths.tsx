@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Container, Typography, LinearProgress } from "@material-ui/core";
+import { Container, Typography } from "@material-ui/core";
 import styles from "../styles/Activities.module.css";
-import { useEffect } from "react";
 
 const operations = ["+", "-", "*", "%"];
 
@@ -64,38 +63,24 @@ const GameReset = ({ setActive }) => {
 export default function MentalMaths() {
   const [active, setActive] = useState(0);
   const [score, setScore] = useState(0);
-  const [timer, setTimer] = useState(100);
   const [numQuestions, setNumQuestions] = useState(10);
 
-  useEffect(() => {
-    let interval = setTimeout(() => {
-      setTimer(timer - 10);
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  // check loss state
-  // if (numQuestions === 0 || timer === 0) {
-  //   setScore(0);
-  //   setActive(0);
-  // }
-  // console.log(active);
-  // console.log(score, numQuestions);
+  const resetGame = () => {
+    // reset
+    setActive(0);
+    setNumQuestions(10);
+    // update bites
+    setScore(0);
+  };
 
   const registerSolution = (option: number, correctIndex: number) => {
-    console.log("x");
     if (option === correctIndex) {
       setScore((prevState: number) => prevState + 1);
     } else if (active) {
-      setActive(0);
-      setScore(0);
+      resetGame();
     }
     if (numQuestions === 1) {
-      // reset
-      setActive(0);
-      setNumQuestions(10);
-      // update bites
-      setScore(0);
+      resetGame();
     } else {
       setNumQuestions((prevNumQuestions: number) => prevNumQuestions - 1);
     }
@@ -107,7 +92,6 @@ export default function MentalMaths() {
         {!active && <GameReset setActive={setActive} />}
         <Typography variant="h2">Mental Maths</Typography>
         <Typography variant="h4">Your Score: {score}</Typography>
-        <LinearProgress variant="determinate" value={timer} />
         <Game registerSolution={registerSolution} />
       </section>
     </Container>

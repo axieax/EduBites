@@ -144,14 +144,11 @@ const BonusBites = () => {
                     }
                   />
                   <div className={styles.descriptionSection}>
-                    <Typography variant="h5" component="h5">
-                      {content.name}
-                    </Typography>
-                    <Typography variant="body1" component="div">
+                    <Typography variant="h3">{content.name}</Typography>
+                    <Typography variant="h4" style={{ fontWeight: "bold" }}>
                       {content.requirement}
                     </Typography>
-                    <br />
-                    <Typography variant="body2" component="p">
+                    <Typography variant="body1">
                       {content.description}
                     </Typography>
                   </div>
