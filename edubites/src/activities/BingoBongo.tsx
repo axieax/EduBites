@@ -18,6 +18,7 @@ import info from "../assets/info.png";
 export default function BingoBongo() {
   return (
     <Container>
+      <br />
       <div className={styles.mainWrappper}>
         <div className={styles.questionHeader}>
           <Typography variant="h2"> Question 1 </Typography>
@@ -47,6 +48,7 @@ export default function BingoBongo() {
           <img src={board} className={styles.bongoBoardImg} />
         </div>
       </div>
+      <br />
     </Container>
   );
 }
