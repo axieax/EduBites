@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/EduBites/static/css/main.58796ec7.chunk.css",
+    "main.js": "/EduBites/static/js/main.68b33834.chunk.js",
+    "main.js.map": "/EduBites/static/js/main.68b33834.chunk.js.map",
+    "runtime-main.js": "/EduBites/static/js/runtime-main.67001c1a.js",
+    "runtime-main.js.map": "/EduBites/static/js/runtime-main.67001c1a.js.map",
+    "static/js/2.6f054fab.chunk.js": "/EduBites/static/js/2.6f054fab.chunk.js",
+    "static/js/2.6f054fab.chunk.js.map": "/EduBites/static/js/2.6f054fab.chunk.js.map",
+    "index.html": "/EduBites/index.html",
+    "static/css/main.58796ec7.chunk.css.map": "/EduBites/static/css/main.58796ec7.chunk.css.map",
+    "static/js/2.6f054fab.chunk.js.LICENSE.txt": "/EduBites/static/js/2.6f054fab.chunk.js.LICENSE.txt",
+    "static/media/bingoBongoBoard.0bcf2d40.png": "/EduBites/static/media/bingoBongoBoard.0bcf2d40.png",
+    "static/media/full_logo.575b935f.png": "/EduBites/static/media/full_logo.575b935f.png",
+    "static/media/hero.6f636ad2.jpg": "/EduBites/static/media/hero.6f636ad2.jpg",
+    "static/media/owl.3295de21.png": "/EduBites/static/media/owl.3295de21.png",
+    "static/media/BingoBongo.module.css": "/EduBites/static/media/wood-pattern.7723af62.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.67001c1a.js",
+    "static/js/2.6f054fab.chunk.js",
+    "static/css/main.58796ec7.chunk.css",
+    "static/js/main.68b33834.chunk.js"
+  ]
+}
