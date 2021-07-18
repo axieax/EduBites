@@ -14,40 +14,58 @@ import { MenuItem } from "@material-ui/core";
 import board from "../assets/bingoBongoBoard.png";
 import profile from "../assets/profile.png";
 import info from "../assets/info.png";
+import { Button, TextField } from "@material-ui/core";
+import SendIcon from "@material-ui/icons/Send";
 
 export default function BingoBongo() {
   return (
     <Container>
       <br />
       <div className={styles.mainWrappper}>
+        <br />
+        <Typography variant="h2">Bingo Bongo</Typography>
+        <Typography variant="h4">Your Score: 15</Typography>
+        <br />
         <div className={styles.questionHeader}>
-          <Typography variant="h2"> Question 1 </Typography>
-
+          <Typography variant="h2">Question 1</Typography>
           <div>
-            <Typography> Points: 15</Typography>
             <InsertInfoButton />
           </div>
         </div>
 
-        <div className={styles.questionText}>
-          <Typography variant="h3">
-            A baseball bat and a ball cost $1.10 together, and the bat costs
-            $1.00 more than the ball, how much does the ball cost?
-          </Typography>
-        </div>
+        <div className={styles.bongo}>
+          <div className={styles.questionText}>
+            <Typography variant="h3">
+              A baseball bat and a ball cost $1.10 together, and the bat costs
+              $1.00 more than the ball. How much does the ball cost?
+            </Typography>
+          </div>
 
-        <form className={styles.answerBox}>
-          <label>
-            Answer:
-            <input type="text" name="name" />
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
+          <div className={styles.answerDiv}>
+            <form className={styles.answerBox}>
+              <TextField
+                id="ans"
+                name="ans"
+                label="Outlined"
+                variant="outlined"
+              />
+              <Button
+                variant="outlined"
+                color="primary"
+                type="submit"
+                value="submit"
+              >
+                <SendIcon />
+              </Button>
+            </form>
+          </div>
 
-        <div className={styles.bongoBoard}>
-          <img src={board} className={styles.bongoBoardImg} />
+          <div className={styles.bongoBoard}>
+            <img src={board} className={styles.bongoBoardImg} />
+          </div>
         </div>
       </div>
+      <br />
       <br />
     </Container>
   );
@@ -96,7 +114,6 @@ function InsertInfoButton() {
         onClose={handleClose}
       >
         <MenuItem onClick={handleClose}> Rules </MenuItem>
-        {/* include */}
         <MenuItem onClick={handleClose}> High Scores </MenuItem>
         <MenuItem onClick={handleClose}> Your Statistics </MenuItem>
       </Menu>

@@ -23,7 +23,7 @@ const tasksData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed neque a quam tempus pellentesque. Aliquam sodales tristique lacus eu.",
     thumbnail:
       "https://clermontlibrary.org/wp-content/uploads/2018/09/image-flat-lay-history.jpg",
-    href: "/game",
+    href: "#",
   },
   {
     name: "English Definitions",
@@ -32,7 +32,7 @@ const tasksData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed neque a quam tempus pellentesque. Aliquam sodales tristique lacus eu.",
     thumbnail:
       "https://3.bp.blogspot.com/-mgAcI0Zt1IQ/WIp79lhXo2I/AAAAAAAAMIs/yvLl0zoR9WcsXZWouU1oRi9_ekY-9sT-gCLcB/s1600/Vocabulary%2Bin%2BDictionary.jpeg",
-    href: "/game",
+    href: "#",
   },
   {
     name: "Mental Mathematics",
@@ -50,7 +50,7 @@ const tasksData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed neque a quam tempus pellentesque. Aliquam sodales tristique lacus eu.",
     thumbnail:
       "https://inteng-storage.s3.amazonaws.com/img/iea/nR6bkaa1wo/sizes/science-wrong_resize_md.jpg",
-    href: "/game",
+    href: "#",
   },
   {
     name: "Maths Homework",
@@ -58,7 +58,7 @@ const tasksData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed neque a quam tempus pellentesque. Aliquam sodales tristique lacus eu.",
     thumbnail: "https://cdn.cdnparenting.com/articles/2018/06/471582446_H.jpg",
-    href: "/game",
+    href: "#",
   },
   {
     name: "Scientific Report",
@@ -67,7 +67,7 @@ const tasksData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed neque a quam tempus pellentesque. Aliquam sodales tristique lacus eu.",
     thumbnail:
       "https://lh3.googleusercontent.com/proxy/6KqoosBmrTZo09dl9_iIxQhhMsTjikS_2hQxo-WSvXo8Qvfip6GK7DnAIU5Be4EJAmQT6g7NtYCFFaKUUAaj7q-Qk4dPx2IYoqnfdEt5jDvOu6pxoDZO1A",
-    href: "/game",
+    href: "#",
   },
 ];
 

@@ -22,7 +22,7 @@ const tasksData = [
     topic: "Mathematics, Science",
     description: "Test your ability to solve quadratic equations here!",
     thumbnail: "https://blog.hubspot.com/hubfs/google-quiz.jpg",
-    href: "/game",
+    href: "#",
   },
   {
     name: "Videos",
@@ -30,14 +30,14 @@ const tasksData = [
     description: "Learn how to balance chemical equations here!",
     thumbnail:
       "https://educational-innovation.sydney.edu.au/teaching@sydney/wp-content/uploads/2017/09/shutterstock_279396767-e1504271826302-770x578.jpg",
-    href: "/game",
+    href: "#",
   },
   {
     name: "Flashcards",
     topic: "English, History",
     description: "Memorise your Shakespearean quotes here!",
     thumbnail: "https://image3.slideserve.com/5784331/slide50-l.jpg",
-    href: "/game",
+    href: "#",
   },
 ];
 

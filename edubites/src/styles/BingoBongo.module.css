@@ -8,22 +8,49 @@
 .questionHeader {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
+  background-color: lightgreen;
+  padding: 0 5%;
+}
+
+.bongo {
+  background-color: lightyellow;
+  padding: 0 5%;
 }
 
 .questionText {
-  padding: 5px;
+  background-color: lightsalmon;
+  background-image: url("../assets/wood-pattern.png");
+  padding-top: 2.8rem;
+  padding-bottom: 2.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.answerDiv {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .answerBox {
+  /* background-color: salmon; */
+  background-image: url("../assets/wood-pattern.png");
   font-weight: bold;
-  padding: 5px;
+  padding: 0.8rem 2rem;
+  border: 2px solid brown;
+}
+
+.answerBox > * {
+  height: 100%;
 }
 
 .bongoBoard {
   height: 300px;
-  margin: 0 auto;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  text-align: center;
 }
 
 .bongoBoardImg {

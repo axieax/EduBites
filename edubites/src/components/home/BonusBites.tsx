@@ -45,7 +45,7 @@ const tasksData = [
     description:
       "Take on the challenge of solving some Olympiad style questions, where you will need to go beyond what you've already learnt in class.",
     thumbnail: "https://skribbl.io/res/thumbnail.png",
-    href: "/game",
+    href: "#",
   },
   {
     name: "Free writing",
@@ -54,8 +54,9 @@ const tasksData = [
     topics: [ENGLISH],
     description:
       "Embark on a journey where you let your mind take to the wonders of nature... Think outside the box and write creatively about this mysterious topic.",
-    thumbnail: "https://skribbl.io/res/thumbnail.png",
-    href: "/game",
+    thumbnail:
+      "https://3.bp.blogspot.com/-mgAcI0Zt1IQ/WIp79lhXo2I/AAAAAAAAMIs/yvLl0zoR9WcsXZWouU1oRi9_ekY-9sT-gCLcB/s1600/Vocabulary%2Bin%2BDictionary.jpeg",
+    href: "#",
   },
   {
     name: "History War Trivia",
@@ -64,8 +65,9 @@ const tasksData = [
     topics: [HISTORY],
     description:
       "Learn more about the causes of World War II and the emotions of various politicians during that conflicting period of time.",
-    thumbnail: "https://skribbl.io/res/thumbnail.png",
-    href: "/game",
+    thumbnail:
+      "https://clermontlibrary.org/wp-content/uploads/2018/09/image-flat-lay-history.jpg",
+    href: "#",
   },
 ];
 
@@ -136,13 +138,18 @@ const BonusBites = () => {
             <div>
               <a href={content.href} className={styles.cardLink}>
                 <div className={styles.card} style={{ margin: 15 }}>
-                  <img
-                    src={
-                      content.locked
-                        ? "https://i.pinimg.com/474x/8d/ef/60/8def60bd977620a499f504abae7a9b31.jpg"
-                        : content.thumbnail
-                    }
-                  />
+                  <div className={styles.thumbnail}>
+                    <img
+                      src={
+                        content.locked
+                          ? "https://i.pinimg.com/474x/8d/ef/60/8def60bd977620a499f504abae7a9b31.jpg"
+                          : content.thumbnail
+                      }
+                    />
+                    <div className={styles.bonus}>
+                      Complete in 6 day(s) for 5% Bonus Bites!
+                    </div>
+                  </div>
                   <div className={styles.descriptionSection}>
                     <Typography variant="h3">{content.name}</Typography>
                     <Typography variant="h4" style={{ fontWeight: "bold" }}>

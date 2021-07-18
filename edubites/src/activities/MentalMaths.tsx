@@ -1,5 +1,10 @@
-import React, { useState } from "react";
-import { Container, Typography } from "@material-ui/core";
+import React, { useEffect, useState } from "react";
+import {
+  Button,
+  Container,
+  Typography,
+  LinearProgress,
+} from "@material-ui/core";
 import styles from "../styles/Activities.module.css";
 
 const operations = ["+", "-", "*", "%"];
@@ -24,9 +29,9 @@ const Game = ({ registerSolution }) => {
   options[correctIndex] = randomSolution;
 
   return (
-    <div>
+    <div className={styles.game}>
       <div className={styles.questions}>
-        <Typography variant="h3">
+        <Typography variant="h3" style={{ marginBottom: "0" }}>
           {randomLeft} {randomOperation === "*" ? "x" : randomOperation}{" "}
           {randomRight} {"= ?"}
         </Typography>
@@ -50,14 +55,38 @@ const GameReset = ({ setActive }) => {
   return (
     <div className={styles.overlay}>
       <div className={styles.resetContent}>
-        Reset
+        <h4>Your score has been reset.</h4>
         <br />
-        <button onClick={() => setActive((prevActive) => !prevActive)}>
+        <Button
+          variant="outlined"
+          onClick={() => setActive((prevActive) => !prevActive)}
+        >
           Start
-        </button>
+        </Button>
       </div>
     </div>
   );
+};
+
+const TimerBar = ({ active, resetGame }) => {
+  const [timer, setTimer] = useState(100);
+  if (timer === 0) {
+    resetGame();
+    setTimer(100);
+  }
+
+  useEffect(() => {
+    let interval = null;
+    if (active) {
+      interval = setInterval(() => {
+        setTimer((prevTimer) => prevTimer - 10);
+      }, 1000);
+    } else {
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  }, [active]);
+  return <LinearProgress variant="determinate" value={timer} />;
 };
 
 export default function MentalMaths() {
@@ -89,10 +118,14 @@ export default function MentalMaths() {
   return (
     <Container>
       <section className={styles.mentalMathsSection}>
-        {!active && <GameReset setActive={setActive} />}
         <Typography variant="h2">Mental Maths</Typography>
         <Typography variant="h4">Your Score: {score}</Typography>
-        <Game registerSolution={registerSolution} />
+        <br />
+        <div className={styles.gameWindow}>
+          {!active && <GameReset setActive={setActive} />}
+          <TimerBar active={active} resetGame={resetGame} />
+          <Game registerSolution={registerSolution} />
+        </div>
       </section>
     </Container>
   );
