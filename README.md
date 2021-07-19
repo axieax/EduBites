@@ -1,5 +1,19 @@
 # Getting Started with Create React App
 
+CSESoc Hackathon 2021 Submission
+
+Team EduBites:
+
+- [Andrew Xie](https://github.com/axieax)
+- [Gabriel Ting](https://github.com/gtangelo)
+- [William Feng](https://github.com/William-Feng)
+- [Prayag Rawat](https://github.com/prayzee)
+
+Our Pitch:
+
+- [Video](https://www.youtube.com/watch?v=Uscr4QLyjOI)
+- [Slides](EduBites.pdf)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
